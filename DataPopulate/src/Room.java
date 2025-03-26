@@ -9,4 +9,7 @@ public class Room {
         this.roomNum=roomNum;
         this.id=id;
     }
+    public String getCombo(){
+        return floor+wing+roomNum;
+    }
 }
