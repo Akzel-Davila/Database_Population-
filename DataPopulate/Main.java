@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -67,9 +68,29 @@ public class Main {
     }
 
     public static void separateNames(ArrayList<String> data){
+        HashMap<String, Integer> DeptIds = new HashMap<String, Integer>();
+        DeptIds.put("Biology", 1);
+        DeptIds.put("Chemistry", 2);
+        DeptIds.put("CTE", 3);
+        DeptIds.put("English", 4);
+        DeptIds.put("PE", 5);
+        DeptIds.put("Mathematics", 6);
+        DeptIds.put("Physics", 7);
+        DeptIds.put("Social", 8 );
+        DeptIds.put("Arts", 9);
+        DeptIds.put("Language", 10);
+        String currDept = "";
         for (int i = 0; i < data.size(); i++){
+            if (!data.get(i).contains(" ")){
+                DeptIds.get(data.get(i));
+
+            }
             if (data.get(i).contains(" ")){
                 int firstSpace = data.get(i).indexOf(" ");
+                int lastSpace = data.get(i).lastIndexOf(" ");
+
+
+                System.out.println("INSERT INTO People(p_id, d_id, );");
             }
 
         }
